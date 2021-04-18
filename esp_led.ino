@@ -6,9 +6,8 @@
 #define SSID ssid    //name wi-fi
 #define PSK psk  // password
 #include "ESP_Wahaj.h" // importing our library
+#define MAXSECTIONCOUNT 50 // max count parsing
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(LED_COUNT, PIN, NEO_GRB + NEO_KHZ800);
-int ledMode;
-#define MAXSECTIONCOUNT 50
 String sections[MAXSECTIONCOUNT];
 String path = "nothing";
 int startx;
