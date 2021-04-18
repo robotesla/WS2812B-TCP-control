@@ -1,8 +1,10 @@
 /* created by @DjamikTea */
 
 #include <Adafruit_NeoPixel.h>
-#define PIN 2
-#define LED_COUNT 48
+#define PIN 2   //GPIO pin
+#define LED_COUNT 48  //led count
+#define SSID ssid    //name wi-fi
+#define PSK psk  // password
 #include "ESP_Wahaj.h" // importing our library
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(LED_COUNT, PIN, NEO_GRB + NEO_KHZ800);
 int ledMode;
@@ -58,7 +60,7 @@ void colorSeter(String hexValue, int j)
 }
 void setup() {
   Serial.begin(115200);
-  start("ssid", "psk"); // Wifi details connect tox
+  start("SSID", "PSK"); // Wifi details connect tox
   pixels.begin();
   pixels.show();
 }
